@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
 const babelConfig = require("../../babel.config");
 
 module.exports = (env, argv) => {
@@ -13,6 +14,9 @@ module.exports = (env, argv) => {
       filename: isDev ? "[name].js" : "[name].[contenthash].js"
     },
     resolve: {
+      plugins: [
+        PnpWebpackPlugin,
+      ],
       extensions: ["*", ".js"],
       alias: {
         common: path.resolve(__dirname, '../../common')
@@ -24,7 +28,7 @@ module.exports = (env, argv) => {
           test: /\.js$/,
           exclude: /[\\/]node_modules[\\/]/,
           use: {
-            loader: 'babel-loader',
+            loader: require.resolve('babel-loader'),
             options: {
               ...babelConfig
             }
@@ -42,6 +46,9 @@ module.exports = (env, argv) => {
         analyzerMode: process.env.BUNDLE_ANALYZER_ENABLED ? 'static' : 'disabled'
       })
     ],
+    resolveLoader: {
+      plugins: [PnpWebpackPlugin.moduleLoader(module)]
+    },
     devServer: {
       port: argv.port,
       stats: "minimal",
