@@ -2,17 +2,24 @@
   "name": "package-managers",
   "version": "1.0.0",
   "description": "showcasing different package loaders behavior",
-  "keywords": ["pnpm", "yarn", "yarn-pnp"],
+  "keywords": [
+    "pnpm",
+    "yarn",
+    "yarn-pnp"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "yarn workspaces run clean && rm -rf node_modules",
+    "clean": "yarn workspaces run clean && rm -rf node_modules && rm -rf yarn.lock",
     "build": "yarn workspaces run build",
     "build:analyze": "yarn workspaces run build:analyze"
   },
   "author": "DimitrK",
   "license": "ISC",
   "private": true,
+  "installConfig": {
+    "pnp": true
+  },
   "workspaces": [
     "apps/*"
   ],
