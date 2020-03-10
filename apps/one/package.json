@@ -1,0 +1,16 @@
+{
+  "name": "@acme/one",
+  "version": "1.0.0",
+  "description": "showcasing sharing common logic across multiple yarn workspaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && webpack --config webpack.config.js"
+  },
+  "author": "DimitrK",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  }
+}
