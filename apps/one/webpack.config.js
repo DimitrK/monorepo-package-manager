@@ -12,7 +12,10 @@ module.exports = (env, argv) => {
       filename: isDev ? "[name].js" : "[name].[contenthash].js"
     },
     resolve: {
-      extensions: ["*", ".js"]
+      extensions: ["*", ".js"],
+      alias: {
+        common: path.resolve(__dirname, '../../common')
+      },
     },
     module: {
       rules: [
