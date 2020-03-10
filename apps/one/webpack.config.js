@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const babelConfig = require("../../babel.config");
 
 module.exports = (env, argv) => {
@@ -36,6 +37,9 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         showErrors: true,
         template: "./index.html"
+      }),
+      new BundleAnalyzerPlugin({
+        analyzerMode: process.env.BUNDLE_ANALYZER_ENABLED ? 'static' : 'disabled'
       })
     ],
     devServer: {

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "yarn workspaces run clean && rm -rf node_modules",
-    "build": "yarn workspaces run build"
+    "build": "yarn workspaces run build",
+    "build:analyze": "yarn workspaces run build:analyze"
   },
   "author": "DimitrK",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "lodash": "^4.17.15",
     "react-hot-loader": "^4.12.19",
     "webpack": "^4.42.0",
+    "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }
