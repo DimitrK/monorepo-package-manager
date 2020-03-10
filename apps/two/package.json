@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && webpack --config webpack.config.js",
-    "clean": "rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "start": "webpack-dev-server --config webpack.config.js --progress --port 5101"
   },
   "author": "DimitrK",
   "license": "ISC",
