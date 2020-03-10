@@ -6,16 +6,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "yarn workspaces run clean && rm -rf node_modules",
-    "build": "yarn workspaces run build",
-    "build:analyze": "yarn workspaces run build:analyze"
+    "clean": "rm -rf node_modules",
+    "build": "echo noop",
+    "build:analyze": "echo noop"
   },
   "author": "DimitrK",
   "license": "ISC",
   "private": true,
-  "workspaces": [
-    "apps/*"
-  ],
   "devDependencies": {
     "@babel/core": "7.8.7",
     "@babel/polyfill": "7.8.7",
