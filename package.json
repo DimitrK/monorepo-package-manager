@@ -5,7 +5,9 @@
   "keywords": ["pnpm", "yarn", "yarn-pnp"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "yarn workspaces run clean && rm -rf node_modules",
+    "build": "yarn workspaces run build"
   },
   "author": "DimitrK",
   "license": "ISC",
