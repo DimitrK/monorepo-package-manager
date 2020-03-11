@@ -5,7 +5,6 @@ _Note: Make sure you have yarn v1.22.0 or v2.x installed. Run `yarn -v`. If yarn
 1. remove any previously set up node modules
 
 ```
-rm -rf .yarnrc.yml
 yarn run clean
 ```
 
