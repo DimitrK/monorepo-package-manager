@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "yarn workspaces run clean && rm -rf node_modules && rm -rf .yarn && rm -rf .yarnrc.yml && rm -rf yarn.lock",
     "build": "yarn workspaces run build",
-    "build:analyze": "yarn workspaces run build:analyze"
+    "build:analyze": "yarn workspaces run build:analyze",
+    "d:webpack": "cd $INIT_CWD && webpack"
   },
   "author": "DimitrK",
   "license": "ISC",

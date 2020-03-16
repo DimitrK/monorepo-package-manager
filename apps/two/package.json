@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && webpack --config webpack.config.js",
+    "build": "rm -rf dist && yarn d:webpack --config webpack.config.js",
     "build:analyze": "BUNDLE_ANALYZER_ENABLED=true yarn workspace @acme/two run build",
     "clean": "rm -rf node_modules && rm -rf dist",
     "start": "webpack-dev-server --config webpack.config.js --progress --port 5101"
