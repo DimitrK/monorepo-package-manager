@@ -14,9 +14,9 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: ["*", ".js"],
-      alias: {
-        common: path.resolve(__dirname, '../../common')
-      },
+      // alias: {
+      //   common: path.resolve(__dirname, '../../common')
+      // },
     },
     module: {
       rules: [
