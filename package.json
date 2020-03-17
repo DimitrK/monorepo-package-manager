@@ -22,7 +22,8 @@
     "pnp": true
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "common"
   ],
   "devDependencies": {
     "@babel/core": "7.8.7",
