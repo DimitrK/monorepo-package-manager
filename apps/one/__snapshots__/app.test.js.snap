@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app matches snapshot 1`] = `
+<div>
+  <div>
+    <p>
+      Hello from app One
+    </p>
+    <button>
+      I am a shared component
+    </button>
+  </div>
+</div>
+`;

@@ -5,7 +5,7 @@
   "keywords": ["pnpm", "yarn", "yarn-pnp"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "yarn workspaces run test",
     "clean": "yarn workspaces run clean && rm -rf node_modules",
     "build": "yarn workspaces run build",
     "build:analyze": "yarn workspaces run build:analyze"
@@ -28,6 +28,10 @@
     "webpack": "4.42.0",
     "webpack-bundle-analyzer": "3.6.1",
     "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.10.3"
+    "webpack-dev-server": "3.10.3",
+    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/react": "10.0.1",
+    "babel-jest": "25.1.0",
+    "jest": "25.1.0"
   }
 }

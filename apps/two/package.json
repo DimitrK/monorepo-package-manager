@@ -4,7 +4,7 @@
   "description": "showcasing sharing common logic across multiple yarn workspaces",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"no op\"",
     "build": "rm -rf dist && webpack --config webpack.config.js",
     "build:analyze": "BUNDLE_ANALYZER_ENABLED=true yarn workspace @acme/two run build",
     "clean": "rm -rf node_modules && rm -rf dist",
