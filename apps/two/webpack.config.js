@@ -14,10 +14,10 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: ["*", ".js"],
-      // alias: {
-      //   common: path.resolve(__dirname, '../../common')
-      // },
-      // modules: ['./node_modules', path.resolve('./node_modules')]
+      alias: {
+        common: path.resolve(__dirname, '../../common')
+      },
+      modules: ['./node_modules', path.resolve('./node_modules')]
     },
     module: {
       rules: [

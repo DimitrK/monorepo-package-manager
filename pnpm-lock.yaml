@@ -28,29 +28,18 @@ importers:
       webpack-dev-server: 3.10.3
   apps/one:
     dependencies:
-      common: 'link:../../common'
       react: 16.13.0
       react-dom: 16.13.0_react@16.13.0
     specifiers:
-      common: 'workspace:*'
       react: 16.13.0
       react-dom: 16.13.0
   apps/two:
     dependencies:
-      common: 'link:../../common'
       react: 16.6.0
       react-dom: 16.6.0_react@16.6.0
     specifiers:
-      common: 'workspace:*'
       react: 16.6.0
       react-dom: 16.6.0
-  common:
-    optionalDependencies:
-      react: 16.13.0
-      react-dom: 16.13.0_react@16.13.0
-    specifiers:
-      react: '>= 15 < 17'
-      react-dom: '>= 15 < 17'
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.8.3:
